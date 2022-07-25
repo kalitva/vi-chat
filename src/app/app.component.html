@@ -1,3 +1,19 @@
-<h1>HELLO, WORLD!</h1>
-<button (click)="addHello()">Add</button>
-<router-outlet></router-outlet>
+<mat-toolbar color="primary">
+  <button mat-icon-button>
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>Vi Chat</span>
+  <span class="spacer"></span>
+  <button mat-icon-button>
+    <mat-icon>favorite</mat-icon>
+  </button>
+  <button mat-icon-button>
+    <mat-icon>share</mat-icon>
+  </button>
+</mat-toolbar>
+
+<div class="back">
+  <div class="wrapper">
+    <router-outlet></router-outlet>
+  </div>
+</div>
