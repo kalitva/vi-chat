@@ -26,7 +26,13 @@
     "space-before-blocks": "warn",
     "brace-style": ["warn", "1tbs", { "allowSingleLine": false }],
     "curly": ["warn", "all"],
-    "comma-dangle": ["warn", "always-multiline"],
+    "comma-dangle": ["warn", {
+      "arrays": "always-multiline",
+      "objects": "always-multiline",
+      "imports": "always-multiline",
+      "exports": "never",
+      "functions": "never"
+    }],
     "eol-last": "warn",
     "no-param-reassign": "warn",
     "prefer-const": "warn",
