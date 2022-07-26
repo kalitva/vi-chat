@@ -15,7 +15,7 @@ $vi-chat-primary: mat.define-palette(mat.$red-palette);
 $vi-chat-accent: mat.define-palette(mat.$grey-palette);
 
 // The warn palette is optional (defaults to red).
-$vi-chat-warn: mat.define-palette(mat.$yellow-palette);
+$vi-chat-warn: mat.define-palette(mat.$deep-purple-palette);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".

@@ -1,0 +1,46 @@
+.welcome-screen {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  overflow-x: hidden;
+  .flying-turtle {
+    position: absolute;
+    top: 10rem;
+    width: 10rem;
+    animation-duration: 10s;
+    animation-name: fly;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  .welcome-dialog {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 40rem;
+    margin: 0 auto;
+    height: 20rem;
+    border-radius: 1rem;
+    background-color: var(--accent100);
+    .dialog-header {
+      text-align: center;
+    }
+    .name-input {
+      text-align: center;
+    }
+    .buttons {
+      display: flex;
+      justify-content: space-around;
+      padding: 2rem 0;
+    }
+  }
+}
+
+@keyframes fly {
+  from {
+    margin-left: -10rem;
+  }
+  to {
+    margin-left: var(--content-width);
+  }
+}

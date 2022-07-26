@@ -2,7 +2,7 @@
   height: 100%;
   background-color: var(--accent100);
   .content-wrapper {
-    width: 100rem;
+    width: var(--content-width);
     height: 100%;
     margin: 0 auto;
     background-image:  linear-gradient(

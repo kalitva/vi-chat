@@ -8,10 +8,12 @@
 
 :root {
   font-size: 10px;
+  --content-width: 100rem;
   --primary400: #{mat-color($vi-chat-primary, 400)};
   --accent100: #{mat-color($vi-chat-accent, 100)};
   --accentA100: #{mat-color($vi-chat-accent, A100)};
   --accent200: #{mat-color($vi-chat-accent, 200)};
+  --accent400: #{mat-color($vi-chat-accent, 400)};
   --warn100: #{mat-color($vi-chat-warn, 100)};
 }
 
