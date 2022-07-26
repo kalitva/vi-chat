@@ -1,0 +1,25 @@
+@import '~@angular/material/theming';
+@import 'src/custom-theme.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 10px;
+  --primary400: #{mat-color($vi-chat-primary, 400)};
+  --accent100: #{mat-color($vi-chat-accent, 100)};
+  --accentA100: #{mat-color($vi-chat-accent, A100)};
+  --accent200: #{mat-color($vi-chat-accent, 200)};
+  --warn100: #{mat-color($vi-chat-warn, 100)};
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
