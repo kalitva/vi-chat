@@ -7,8 +7,8 @@
   .flying-turtle {
     position: absolute;
     top: 10rem;
-    width: 10rem;
-    animation-duration: 10s;
+    width: 13rem;
+    animation-duration: 15s;
     animation-name: fly;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
@@ -17,13 +17,14 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    width: 40rem;
+    width: 35rem;
     margin: 0 auto;
     height: 20rem;
     border-radius: 1rem;
     background-color: var(--accent100);
     .dialog-header {
       text-align: center;
+      letter-spacing: -0.05rem;
     }
     .name-input {
       text-align: center;

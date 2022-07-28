@@ -9,10 +9,10 @@ import { FormControl, Validators } from '@angular/forms';
 export class WelcomeComponent implements OnInit {
   private readonly INITIAL_TURTLE_POSITION = 100;
 
-  emailFormControl: FormControl;
+  nameFormControl: FormControl;
 
   constructor() {
-    this.emailFormControl = new FormControl('', [Validators.required]);
+    this.nameFormControl = new FormControl('', [Validators.required]);
   }
 
   ngOnInit(): void {
