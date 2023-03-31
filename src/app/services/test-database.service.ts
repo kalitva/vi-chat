@@ -3,7 +3,7 @@ import { Database, DataSnapshot, onValue } from '@angular/fire/database';
 import { ref, set } from '@firebase/database';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class TestDatabaseService {
 

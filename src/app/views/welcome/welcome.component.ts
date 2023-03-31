@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 
+const INITIAL_TURTLE_POSITION = 100;
+
 @Component({
   selector: 'app-welcome',
   templateUrl: './welcome.component.html',
   styleUrls: ['./welcome.component.scss'],
 })
 export class WelcomeComponent implements OnInit {
-  private readonly INITIAL_TURTLE_POSITION = 100;
-
   nameFormControl: FormControl;
 
   constructor() {
@@ -22,7 +22,7 @@ export class WelcomeComponent implements OnInit {
     const img = event.target as HTMLElement;
     const parent = img.parentNode as HTMLElement;
     const newPosition = this.randomFromRange(
-      this.INITIAL_TURTLE_POSITION,
+      INITIAL_TURTLE_POSITION,
       parent.clientHeight - img.clientHeight
     );
     img.style.top = `${newPosition}px`;

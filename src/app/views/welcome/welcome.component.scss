@@ -1,9 +1,5 @@
 .welcome-screen {
-  position: relative;
-  display: flex;
-  align-items: center;
   height: 100%;
-  overflow-x: hidden;
   .flying-turtle {
     position: absolute;
     top: 10rem;
@@ -13,17 +9,30 @@
     animation-iteration-count: infinite;
     animation-timing-function: linear;
   }
-  .welcome-dialog {
+  .flowers-background {
+    position: relative;
     display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    width: 35rem;
+    align-items: center;
+    width: var(--content-width);
+    height: 100%;
     margin: 0 auto;
-    height: 20rem;
-    border-radius: 1rem;
-    .dialog-header {
-      text-align: center;
-      letter-spacing: -0.05rem;
+    overflow-x: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: var(--accent400);
+    background-image: url('/assets/flowers-pattern.png');
+    background-size: 150rem auto;
+    .welcome-dialog {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      width: 35rem;
+      margin: 0 auto;
+      height: 20rem;
+      border-radius: 1rem;
+      .dialog-header {
+        text-align: center;
+        letter-spacing: -0.05rem;
+      }
     }
     .name-input {
       text-align: center;
