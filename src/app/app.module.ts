@@ -16,12 +16,16 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SessionComponent } from './views/session/session.component';
+import { ChatComponent } from './views/chat/chat.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WelcomeComponent,
     TopBarComponent,
+    SessionComponent,
+    ChatComponent,
   ],
   imports: [
     BrowserModule,

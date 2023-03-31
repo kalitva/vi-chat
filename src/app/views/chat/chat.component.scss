@@ -1,0 +1,7 @@
+.chat {
+  width: var(--content-width);
+  height: calc(100% - 2px);
+  margin: 0 auto;
+  border-left: 1px dotted var(--accentA100);
+  border-right: 1px dotted var(--accentA100);
+}
