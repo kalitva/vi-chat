@@ -1,6 +1,8 @@
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @use '@angular/material' as mat;
+@import './custom-palettes';
+
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -8,80 +10,12 @@
 // Be sure that you only ever include this mixin once!
 @include mat.core();
 
-/* For use in src/lib/core/theming/_palette.scss */
-/* For use in src/lib/core/theming/_palette.scss */
-$dark-gray: (
-  50 : #e5e5e5,
-  100 : #bebebe,
-  200 : #939393,
-  300 : #676767,
-  400 : #474747,
-  500 : #262626,
-  600 : #222222,
-  700 : #1c1c1c,
-  800 : #171717,
-  900 : #0d0d0d,
-  A100 : #eb6969,
-  A200 : #e53c3c,
-  A400 : #ee0000,
-  A700 : #d40000,
-  contrast: (
-    50 : #000000,
-    100 : #000000,
-    200 : #000000,
-    300 : #ffffff,
-    400 : #ffffff,
-    500 : #ffffff,
-    600 : #ffffff,
-    700 : #ffffff,
-    800 : #ffffff,
-    900 : #ffffff,
-    A100 : #000000,
-    A200 : #ffffff,
-    A400 : #ffffff,
-    A700 : #ffffff,
-  )
-);
-
-$yellow: (
-    50 : #fefbe5,
-    100 : #fdf5bd,
-    200 : #fbef91,
-    300 : #f9e965,
-    400 : #f8e444,
-    500 : #f7df23,
-    600 : #f6db1f,
-    700 : #f5d71a,
-    800 : #f3d215,
-    900 : #f1ca0c,
-    A100 : #ffffff,
-    A200 : #fffbe8,
-    A400 : #fff1b5,
-    A700 : #ffec9c,
-    contrast: (
-        50 : #000000,
-        100 : #000000,
-        200 : #000000,
-        300 : #000000,
-        400 : #000000,
-        500 : #000000,
-        600 : #000000,
-        700 : #000000,
-        800 : #000000,
-        900 : #000000,
-        A100 : #000000,
-        A200 : #000000,
-        A400 : #000000,
-        A700 : #000000,
-    )
-);
-
 
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
 $vi-chat-primary: mat.define-palette($dark-gray);
-$vi-chat-accent: mat.define-palette(mat.$grey-palette);
+$vi-chat-accent: mat.define-palette($lightgreen);
 
 // The warn palette is optional (defaults to red).
 $vi-chat-warn: mat.define-palette(mat.$red-palette);
