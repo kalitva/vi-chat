@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { SessionService } from 'src/app/services/session.service';
 
 @Component({
   selector: 'app-session',
@@ -8,9 +9,9 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class SessionComponent implements OnInit {
 
-  constructor(private activatedRoute: ActivatedRoute) { }
+  constructor(private activatedRoute: ActivatedRoute, private sessionService: SessionService) { }
 
   ngOnInit(): void {
-    console.log(this.activatedRoute.snapshot.paramMap.get('id'));
+    const sessionId = this.activatedRoute.snapshot.paramMap.get('id');
   }
 }

@@ -27,20 +27,24 @@
       flex-direction: column;
       width: 35rem;
       margin: 0 auto;
-      height: 20rem;
+      min-height: 20rem;
       border-radius: 1rem;
       .dialog-header {
         text-align: center;
         letter-spacing: -0.05rem;
       }
-    }
-    .name-input {
-      text-align: center;
-    }
-    .buttons {
-      display: flex;
-      justify-content: space-around;
-      padding: 2rem 0;
+      .name-input {
+        text-align: center;
+      }
+      .buttons {
+        display: flex;
+        justify-content: space-around;
+        padding: 2rem 0;
+        .accent-button {
+          /* TODO move the color to accent palette */
+          background: #2357a7;
+        }
+      }
     }
   }
 }

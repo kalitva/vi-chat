@@ -1,9 +1,9 @@
 <section class="welcome-screen">
   <div class="flowers-background">
     <img
-      class="flying-turtle"
-      src="/assets/flying-turtle.svg"
-      (animationiteration)="startTurtleFromNewPosition($event)"
+        class="flying-turtle"
+        src="/assets/flying-turtle.svg"
+        (animationiteration)="startTurtleFromNewPosition($event)"
     />
     <mat-card class="welcome-dialog">
       <mat-card-title class="dialog-header">Welcome to Vi Chat!</mat-card-title>
@@ -15,10 +15,38 @@
             Name is <strong>required</strong>
           </mat-error>
         </mat-form-field>
-      </div>
+        <mat-form-field *ngIf="showSessionIdInput">
+          <mat-label>Session Id</mat-label>
+          <input type="text" matInput [formControl]="sessionIdFormControl">
+          <mat-error *ngIf="sessionIdFormControl.hasError('required')">
+            Enter session id
+          </mat-error>
+        </mat-form-field>
+     </div>
       <div class="buttons">
-        <button mat-flat-button color="primary" (click)="createSession()">Create Session</button>
-        <button mat-flat-button color="primary">Join Session</button>
+        <button
+            *ngIf="!showSessionIdInput"
+            mat-flat-button
+            color="primary"
+            (click)="createSession()"
+        >
+          Create Session
+        </button>
+        <button
+            *ngIf="showSessionIdInput"
+            color="primary"
+            mat-flat-button (click)="showSessionIdInput=false"
+        >
+          Back
+        </button>
+        <button
+            mat-flat-button
+            color="primary"
+            (click)="joinSession()"
+            [class.accent-button]="showSessionIdInput"
+        >
+          {{ showSessionIdInput ? 'Join!' : 'Join Session' }}
+        </button>
       </div>
     </mat-card>
   </div>

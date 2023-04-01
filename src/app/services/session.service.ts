@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Database } from '@angular/fire/database';
+import { Database, push, ref, set } from '@angular/fire/database';
 
 @Injectable({
   providedIn: 'root',
@@ -7,15 +7,13 @@ import { Database } from '@angular/fire/database';
 export class SessionService {
   constructor(private database: Database) { }
 
-  createSession(uid: string): void {
-
+  openSession(): string {
+    const sessionId = globalThis.crypto.randomUUID();
+    set(ref(this.database, `sessions/${sessionId}`), '');
+    return sessionId;
   }
 
-  addUser(uid: string): void {
-
-  }
-
-  removeUser(uid: string): void {
-
+  sessionExists(id: string): boolean {
+    return id === '123';
   }
 }
