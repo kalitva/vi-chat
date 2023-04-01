@@ -1,0 +1,9 @@
+<section class="flowers-background">
+  <img
+      *ngIf="flyTheTurtle"
+      class="flying-turtle"
+      src="/assets/flying-turtle.svg"
+      (animationiteration)="startTurtleFromNewPosition($event)"
+  />
+  <ng-content></ng-content>
+</section>

@@ -1,11 +1,8 @@
 import { Component } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { randomFromRange } from 'src/app/lib/utils';
 import { ParticipantService } from 'src/app/services/participant.service';
 import { SessionService } from 'src/app/services/session.service';
-
-const INITIAL_TURTLE_POSITION = 100;
 
 @Component({
   selector: 'app-welcome',
@@ -25,16 +22,6 @@ export class WelcomeComponent {
   ) {
     this.nameFormControl = new FormControl('', [Validators.required]);
     this.sessionIdFormControl = new FormControl('', [Validators.required]);
-  }
-
-  startTurtleFromNewPosition(event: Event): void {
-    const img = event.target as HTMLElement;
-    const parent = img.parentNode as HTMLElement;
-    const newPosition = randomFromRange(
-      INITIAL_TURTLE_POSITION,
-      parent.clientHeight - img.clientHeight
-    );
-    img.style.top = `${newPosition}px`;
   }
 
   createSession(): void {

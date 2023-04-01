@@ -18,6 +18,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SessionComponent } from './views/session/session.component';
 import { ChatComponent } from './views/chat/chat.component';
+import { FlowersBackgroundComponent } from './components/flowers-background/flowers-background.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { ChatComponent } from './views/chat/chat.component';
     TopBarComponent,
     SessionComponent,
     ChatComponent,
+    FlowersBackgroundComponent,
   ],
   imports: [
     BrowserModule,

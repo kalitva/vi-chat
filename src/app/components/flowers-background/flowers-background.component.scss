@@ -1,0 +1,29 @@
+.flowers-background {
+  position: relative;
+  height: 100%;
+  width: var(--content-width);
+  margin: 0 auto;
+  overflow-x: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: var(--accent400);
+  background-image: url('/assets/flowers-pattern.png');
+  background-size: 150rem auto;
+  .flying-turtle {
+    position: absolute;
+    top: 10rem;
+    width: 13rem;
+    animation-duration: 15s;
+    animation-name: fly;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+}
+
+@keyframes fly {
+  from {
+    margin-left: -10rem;
+  }
+  to {
+    margin-left: var(--content-width);
+  }
+}

@@ -1,53 +1,33 @@
-.welcome-screen {
+.content-wrapper {
+  display: flex;
+  align-items: center;
   height: 100%;
-  .flying-turtle {
-    position: absolute;
-    top: 10rem;
-    width: 13rem;
-    animation-duration: 15s;
-    animation-name: fly;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-  }
-  .flowers-background {
-    position: relative;
+  .welcome-dialog {
     display: flex;
-    align-items: center;
-    width: var(--content-width);
-    height: 100%;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 35rem;
     margin: 0 auto;
-    overflow-x: hidden;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background-color: var(--accent400);
-    background-image: url('/assets/flowers-pattern.png');
-    background-size: 150rem auto;
-    .welcome-dialog {
+    min-height: 20rem;
+    border-radius: 1rem;
+    .dialog-header {
+      text-align: center;
+      letter-spacing: -0.05rem;
+    }
+    .name-input {
+      text-align: center;
+    }
+    .buttons {
       display: flex;
-      justify-content: space-between;
-      flex-direction: column;
-      width: 35rem;
-      margin: 0 auto;
-      min-height: 20rem;
-      border-radius: 1rem;
-      .dialog-header {
-        text-align: center;
-        letter-spacing: -0.05rem;
-      }
-      .name-input {
-        text-align: center;
-      }
-      .buttons {
-        display: flex;
-        justify-content: space-around;
-        padding: 2rem 0;
-        .accent-button {
-          /* TODO move the color to accent palette */
-          background: var(--primaryA700);
-        }
+      justify-content: space-around;
+      padding: 2rem 0;
+      .accent-button {
+        background: var(--primaryA700);
       }
     }
   }
 }
+
 
 @keyframes fly {
   from {
