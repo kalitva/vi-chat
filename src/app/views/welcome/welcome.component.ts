@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { randomFromRange } from 'src/app/lib/utils';
 import { SessionService } from 'src/app/services/session.service';
 
 const INITIAL_TURTLE_POSITION = 100;
@@ -23,7 +24,7 @@ export class WelcomeComponent implements OnInit {
   startTurtleFromNewPosition(event: Event): void {
     const img = event.target as HTMLElement;
     const parent = img.parentNode as HTMLElement;
-    const newPosition = this.randomFromRange(
+    const newPosition = randomFromRange(
       INITIAL_TURTLE_POSITION,
       parent.clientHeight - img.clientHeight
     );
@@ -40,9 +41,5 @@ export class WelcomeComponent implements OnInit {
     this.sessionService.createSession(sessionId);
     this.sessionService.addUser(userId);
     this.router.navigate(['session', sessionId]);
-  }
-
-  private randomFromRange(min: number, max: number): number {
-    return Math.floor(Math.random() * (max - min) + min);
   }
 }
