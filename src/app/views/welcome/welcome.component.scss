@@ -42,7 +42,7 @@
         padding: 2rem 0;
         .accent-button {
           /* TODO move the color to accent palette */
-          background: #2357a7;
+          background: var(--primaryA700);
         }
       }
     }
