@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Database, push, ref, set } from '@angular/fire/database';
+import { child, Database, get, ref, set } from '@angular/fire/database';
+import { from, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -13,7 +14,10 @@ export class SessionService {
     return sessionId;
   }
 
-  sessionExists(id: string): boolean {
-    return id === '123';
+  sessionExists(id: string): Observable<boolean> {
+    return from(
+      get(child(ref(this.database), `sessions/${id}`))
+        .then(snapshot => snapshot.exists())
+    );
   }
 }

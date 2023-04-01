@@ -68,13 +68,19 @@ export class WelcomeComponent {
     }
     // TODO validate session exists
     const sessionId = this.sessionIdFormControl.value;
-    const participantId = this.participantService.addParticipant(sessionId, {
-      name: this.nameFormControl.value,
-      active: true,
+    this.sessionService.sessionExists(sessionId).subscribe(exists => {
+      if (!exists) {
+        this.sessionIdFormControl.setErrors({ sessionNotFound: true });
+        return;
+      }
+      const participantId = this.participantService.addParticipant(sessionId, {
+        name: this.nameFormControl.value,
+        active: true,
+      });
+      // TODO delete logging
+      console.log('participantId: ' + participantId);
+      console.log('sessionId: ' + sessionId);
+      this.router.navigate(['session', sessionId]);
     });
-    // TODO delete logging
-    console.log('participantId: ' + participantId);
-    console.log('sessionId: ' + sessionId);
-    this.router.navigate(['session', sessionId]);
   }
 }
