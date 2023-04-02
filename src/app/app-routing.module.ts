@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { JoinSessionFormComponent } from './views/join-session-form/join-session-form.component';
 import { SessionComponent } from './views/session/session.component';
-import { WelcomeComponent } from './views/welcome/welcome.component';
+import { WelcomeFormComponent } from './views/welcome-form/welcome-form.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'welcome', pathMatch: 'full' },
-  { path: 'welcome', component: WelcomeComponent },
+  { path: 'welcome', component: WelcomeFormComponent },
   { path: 'session/:id', component: SessionComponent },
+  { path: 'join', component: JoinSessionFormComponent },
 ];
 
 @NgModule({

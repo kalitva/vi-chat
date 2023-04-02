@@ -1,0 +1,27 @@
+<app-flowers-background [flyTheTurtle]="false">
+  <mat-card class="welcome-dialog">
+    <mat-card-title class="dialog-header">Welcome to Vi Chat!</mat-card-title>
+    <div class="form">
+      <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input #name type="text" matInput placeholder="John Doe">
+      </mat-form-field>
+   </div>
+    <div class="buttons">
+      <button
+          mat-flat-button
+          color="primary"
+          (click)="createSession()"
+      >
+        Create Session
+      </button>
+      <button
+          mat-flat-button
+          color="primary"
+          (click)="joinSession(name.value)"
+      >
+        Join Session
+      </button>
+    </div>
+  </mat-card>
+</app-flowers-background>

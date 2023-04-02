@@ -8,14 +8,19 @@
   background-color: var(--accent400);
   background-image: url('/assets/flowers-pattern.png');
   background-size: 150rem auto;
-  .flying-turtle {
-    position: absolute;
-    top: 10rem;
-    width: 13rem;
-    animation-duration: 15s;
-    animation-name: fly;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+  .content-wrapper {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    .flying-turtle {
+      position: absolute;
+      top: 10rem;
+      width: 13rem;
+      animation-duration: 15s;
+      animation-name: fly;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
   }
 }
 
