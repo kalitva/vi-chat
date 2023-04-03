@@ -12,28 +12,10 @@ import { SessionService } from 'src/app/services/session.service';
 export class WelcomeFormComponent {
   nameFormControl: FormControl;
 
-  constructor(
-    private router: Router,
-    private participantService: ParticipantService,
-    private sessionService: SessionService
-  ) {
-    this.nameFormControl = new FormControl('', [Validators.required]);
-  }
+  constructor(private router: Router) {  }
 
-  createSession(): void {
-    this.nameFormControl.markAsTouched();
-    if (!this.nameFormControl.valid) {
-      return;
-    }
-    const sessionId = this.sessionService.openSession();
-    const participantId = this.participantService.addParticipant(sessionId, {
-      name: this.nameFormControl.value,
-      active: true,
-    });
-    // TODO delete logging
-    console.log('participantId: ' + participantId);
-    console.log('sessionId: ' + sessionId);
-    this.router.navigate(['session', sessionId]);
+  createSession(name: string): void {
+    this.router.navigateByUrl(`/create?name=${name}`);
   }
 
   joinSession(name: string): void {

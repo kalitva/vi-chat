@@ -20,6 +20,8 @@ import { SessionComponent } from './views/session/session.component';
 import { ChatComponent } from './views/chat/chat.component';
 import { FlowersBackgroundComponent } from './components/flowers-background/flowers-background.component';
 import { JoinSessionFormComponent } from './views/join-session-form/join-session-form.component';
+import { CreateSessionFormComponent } from './views/create-session-form/create-session-form.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -30,10 +32,12 @@ import { JoinSessionFormComponent } from './views/join-session-form/join-session
     ChatComponent,
     FlowersBackgroundComponent,
     JoinSessionFormComponent,
+    CreateSessionFormComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideDatabase(() => getDatabase()),
 

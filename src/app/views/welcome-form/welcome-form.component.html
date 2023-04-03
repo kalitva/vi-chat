@@ -8,18 +8,10 @@
       </mat-form-field>
    </div>
     <div class="buttons">
-      <button
-          mat-flat-button
-          color="primary"
-          (click)="createSession()"
-      >
+      <button mat-flat-button color="primary" (click)="createSession(name.value)">
         Create Session
       </button>
-      <button
-          mat-flat-button
-          color="primary"
-          (click)="joinSession(name.value)"
-      >
+      <button mat-flat-button color="primary" (click)="joinSession(name.value)">
         Join Session
       </button>
     </div>

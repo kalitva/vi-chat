@@ -1,0 +1,29 @@
+<app-flowers-background [flyTheTurtle]="false">
+  <mat-card class="welcome-dialog">
+    <mat-card-title class="dialog-header">Create Session</mat-card-title>
+    <div class="form">
+      <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input type="text" matInput [formControl]="nameFormControl" placeholder="John Doe">
+        <mat-error *ngIf="nameFormControl.hasError('required')">
+          Name is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Topic</mat-label>
+        <input #topic type="text" spellcheck="false" matInput>
+     </mat-form-field>
+   </div>
+    <div class="buttons">
+     <button color="accent" mat-flat-button (click)="location.back()">Back</button>
+      <button
+          class="accent-button"
+          mat-flat-button
+          color="primary"
+          (click)="createSession(topic.value)"
+      >
+       Create
+      </button>
+    </div>
+  </mat-card>
+</app-flowers-background>
