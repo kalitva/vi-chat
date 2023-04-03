@@ -1,7 +1,11 @@
 <mat-toolbar class="top-bar" color="primary">
-  <button mat-icon-button>
+  <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
     <mat-icon>menu</mat-icon>
   </button>
+  <mat-menu #menu="matMenu">
+    <a mat-menu-item routerLink="/create">Create Session</a>
+    <a mat-menu-item routerLink="/join">Join Session</a>
+  </mat-menu>
   <span>Vi Chat</span>
   <span class="spacer"></span>
   <button mat-icon-button>
