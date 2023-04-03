@@ -1,3 +1,5 @@
+// TODO correct this rule
+/* eslint-disable max-len */
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
