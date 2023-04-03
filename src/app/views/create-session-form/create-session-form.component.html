@@ -1,6 +1,6 @@
 <app-flowers-background [flyTheTurtle]="false">
-  <mat-card class="welcome-dialog">
-    <mat-card-title class="dialog-header">Create Session</mat-card-title>
+  <mat-card class="dialog">
+    <mat-card-title class="header">Create Session</mat-card-title>
     <div class="form">
       <mat-form-field>
         <mat-label>Name</mat-label>
@@ -17,7 +17,7 @@
     <div class="buttons">
      <button color="accent" mat-flat-button (click)="location.back()">Back</button>
       <button
-          class="accent-button"
+          class="blue-accent-button"
           mat-flat-button
           color="primary"
           (click)="createSession(topic.value)"

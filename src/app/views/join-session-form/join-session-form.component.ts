@@ -8,7 +8,7 @@ import { SessionService } from 'src/app/services/session.service';
 @Component({
   selector: 'app-join-session-form',
   templateUrl: './join-session-form.component.html',
-  styleUrls: ['./join-session-form.component.scss'],
+  styleUrls: ['../../../styles/forms.scss', './join-session-form.component.scss'],
 })
 export class JoinSessionFormComponent implements OnInit {
   nameFormControl: FormControl;

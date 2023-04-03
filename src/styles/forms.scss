@@ -1,0 +1,25 @@
+.dialog {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 35rem;
+  margin: 0 auto;
+  min-height: 20rem;
+  border-radius: 1rem;
+  .header {
+    text-align: center;
+    letter-spacing: -0.05rem;
+  }
+  .form {
+    text-align: center;
+  }
+  .buttons {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem 0;
+    .blue-accent-button {
+      background: var(--primaryA700);
+    }
+  }
+}
+

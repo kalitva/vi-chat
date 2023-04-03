@@ -8,7 +8,7 @@ import { SessionService } from 'src/app/services/session.service';
 @Component({
   selector: 'app-create-session-form',
   templateUrl: './create-session-form.component.html',
-  styleUrls: ['./create-session-form.component.scss'],
+  styleUrls: ['../../../styles/forms.scss', './create-session-form.component.scss'],
 })
 export class CreateSessionFormComponent {
   nameFormControl: FormControl;
