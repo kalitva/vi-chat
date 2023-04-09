@@ -9,16 +9,31 @@
 :root {
   font-size: 10px;
   --content-width: 100rem;
+  --primary100: #{mat-color($vi-chat-primary, 100)};
+  --primary200: #{mat-color($vi-chat-primary, 200)};
+  --primary300: #{mat-color($vi-chat-primary, 300)};
   --primary400: #{mat-color($vi-chat-primary, 400)};
   --primary500: #{mat-color($vi-chat-primary, 500)};
+  --primary700: #{mat-color($vi-chat-primary, 700)};
+  --primary800: #{mat-color($vi-chat-primary, 800)};
   --primary900: #{mat-color($vi-chat-primary, 900)};
+  --primaryA400: #{mat-color($vi-chat-primary, A100)};
   --primaryA700: #{mat-color($vi-chat-primary, A700)};
   --accent100: #{mat-color($vi-chat-accent, 100)};
   --accent200: #{mat-color($vi-chat-accent, 200)};
   --accent400: #{mat-color($vi-chat-accent, 400)};
+  --accent500: #{mat-color($vi-chat-accent, 500)};
+  --accent700: #{mat-color($vi-chat-accent, 700)};
   --accentA100: #{mat-color($vi-chat-accent, A100)};
+  --warn300: #{mat-color($vi-chat-warn, 300)};
+  --warn400: #{mat-color($vi-chat-warn, 400)};
+  --warn500: #{mat-color($vi-chat-warn, 500)};
 }
 
 html, body {
   height: 100%;
+}
+
+li {
+  list-style-type: none;
 }

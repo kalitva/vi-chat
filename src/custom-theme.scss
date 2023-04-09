@@ -8,13 +8,15 @@
 // hue. Available color palettes: https://material.io/design/color/
 $vi-chat-primary: mat.define-palette($dark-gray);
 $vi-chat-accent: mat.define-palette($lightgreen);
+$vi-chat-warn: mat.define-palette(mat.$red-palette);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
 $vi-chat-theme: mat.define-light-theme((
   color: (
     primary: $vi-chat-primary,
-    accent: $vi-chat-accent
+    accent: $vi-chat-accent,
+    warn: $vi-chat-warn
   )
 ));
 

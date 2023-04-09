@@ -25,13 +25,14 @@ export class SessionService {
 
   // TODO set time out to random topic request
   getRandomTopic(): Observable<string> {
-    const url = 'https://api.api-ninjas.com/v1/bucketlist'; // docs: https://api-ninjas.com/api
+    const url = 'https://api.api-ninjas.com/v1/bucketlist'; // https://api-ninjas.com/api/bucketlist
     return from(get(ref(this.database, 'ninja-api-key')))
       .pipe(map(snapshot => snapshot.val()))
-      .pipe(mergeMap(apiKey => this.httpClient.get(url, { headers: { 'X-Api-Key': apiKey } })))
+      .pipe(mergeMap(apiKey => {
+        return this.httpClient.get<{item: string}>(url, { headers: { 'X-Api-Key': apiKey } });
+      }))
       .pipe(
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        map((response: any) => response.item),
+        map(response => response.item),
         catchError(e => {
           console.error(e);
           return of('No Topic');
