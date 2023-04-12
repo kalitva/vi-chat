@@ -18,8 +18,7 @@ export class ChatComponent implements OnInit {
 
   ngOnInit(): void {
     const sessionId = this.activatedRoute.snapshot.paramMap.get('id') || '';
-    this.participantService.getParticipantsBySessionId(sessionId)
-      .subscribe(ps => this.participants = ps);
-    this.participantService.startMusicBroadcast(sessionId, '-NSAfqc-2-qbj8wV4LBa');
+//    this.participantService.getParticipantsBySessionId(sessionId)
+//      .subscribe(ps => this.participants = ps);
   }
 }

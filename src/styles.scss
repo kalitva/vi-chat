@@ -9,6 +9,7 @@
 :root {
   font-size: 10px;
   --content-width: 100rem;
+  --top-bar-height: 6.5rem;
   --primary100: #{mat-color($vi-chat-primary, 100)};
   --primary200: #{mat-color($vi-chat-primary, 200)};
   --primary300: #{mat-color($vi-chat-primary, 300)};

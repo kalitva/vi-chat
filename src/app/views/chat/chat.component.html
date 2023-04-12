@@ -1,21 +1,2 @@
 <section class="chat">
-  <ul class="participants">
-    <li *ngFor="let participant of participants | keyvalue">
-      <div class="participant">
-        <div>
-          <div class="online-index" [ngClass]="participant.value.active ? 'active' : 'inactive'">
-          </div>
-        </div>
-        <div class="name">
-          {{ participant.value.name }}
-        </div>
-        <mat-icon [ngClass]="participant.value.musicBroadcast ? 'icon-on' : 'icon-off'">
-          {{ participant.value.musicBroadcast ? 'music_note' : 'music_off' }}
-        </mat-icon>
-         <mat-icon [ngClass]="participant.value.videoBroadcast ? 'icon-on' : 'icon-off'">
-          {{ participant.value.videoBroadcast ? 'videocam' : 'videocam_off' }}
-        </mat-icon>
-     </div>
-    </li>
-  </ul>
 </section>
