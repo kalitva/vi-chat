@@ -18,17 +18,20 @@
   --primary700: #{mat-color($vi-chat-primary, 700)};
   --primary800: #{mat-color($vi-chat-primary, 800)};
   --primary900: #{mat-color($vi-chat-primary, 900)};
-  --primaryA400: #{mat-color($vi-chat-primary, A100)};
+  --primaryA400: #{mat-color($vi-chat-primary, A400)};
   --primaryA700: #{mat-color($vi-chat-primary, A700)};
   --accent100: #{mat-color($vi-chat-accent, 100)};
   --accent200: #{mat-color($vi-chat-accent, 200)};
   --accent400: #{mat-color($vi-chat-accent, 400)};
   --accent500: #{mat-color($vi-chat-accent, 500)};
   --accent700: #{mat-color($vi-chat-accent, 700)};
+  --accent900: #{mat-color($vi-chat-accent, 900)};
   --accentA100: #{mat-color($vi-chat-accent, A100)};
+  --accentA200: #{mat-color($vi-chat-accent, A200)};
   --warn300: #{mat-color($vi-chat-warn, 300)};
   --warn400: #{mat-color($vi-chat-warn, 400)};
   --warn500: #{mat-color($vi-chat-warn, 500)};
+  --warn700: #{mat-color($vi-chat-warn, 700)};
 }
 
 html, body {
